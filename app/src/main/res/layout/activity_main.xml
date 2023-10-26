@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/backgroundColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvHeader"
+        android:layout_marginTop="60dp"
+        android:fontFamily="serif-monospace"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Qr Holder-->
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/tvQrCode"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/qrpng"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeader"
+        tools:ignore="ContentDescription"/>
+
+    <!-- edit text -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/etText"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="35dp"
+        android:background="@color/bg"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:hint="@string/entertext"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/hint"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvQrCode"/>
+
+    <!-- Generate -->
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:id="@+id/btnGenerate"
+        android:layout_height="61dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorGreen"
+        android:text="@string/generate"
+        app:layout_constraintTop_toBottomOf="@+id/etText"
+        android:textAllCaps="true"
+        app:cornerRadius="12dp"/>
+
+    <!-- Share -->
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/btnShare"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="50dp"
+        app:cornerRadius="10dp"
+        android:text="@string/share"
+        android:textAllCaps="true"
+        android:backgroundTint="@color/teal_700"
+        app:layout_constraintTop_toBottomOf="@+id/btnGenerate"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
